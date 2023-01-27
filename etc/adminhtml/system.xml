@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+    Thomas Athanasiou at Hippiemonkeys
+    Copyright (c) 2022 Hippiemonkeys (https://hippiemonkeys.com)
+    Hippiemonkeys_ShippingTrack
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="hippiemonkeys_shipping">
+            <group id="track">
+                <field id="cronjob_active" translate="label" type="select" sortOrder="0" showInDefault="1" canRestore="1">
+                    <label>Cronjob Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cronjob_processshipment_limit" translate="label" type="text" sortOrder="10" showInDefault="1" canRestore="1">
+                    <label>Shipment Processing Limit</label>
+                    <comment>Limits the processing of shipment tracks per cron runs</comment>
+                </field>
+                <field id="cronjob_processshipment_status_ids" translate="label" type="multiselect" sortOrder="20" showInDefault="1" canRestore="1">
+                    <label>Shipment Statuses to Process</label>
+                    <source_model>Hippiemonkeys\ShippingTrack\Model\Config\Source\Statuses</source_model>
+                    <comment>Process shipments with these statuses</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
