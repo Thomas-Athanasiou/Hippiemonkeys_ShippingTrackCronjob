@@ -11,14 +11,14 @@
             instance="Hippiemonkeys\ShippingTrackCronjob\Cron\UpdateShipmentTracks"
             method="execute"
         >
-            <schedule>*/15 * * * *</schedule>
+            <schedule>*/5 * * * *</schedule>
         </job>
         <job
             name="hippiemonkeys_shippingtrackcronjob_updatestatelessshipmenttracks"
             instance="Hippiemonkeys\ShippingTrackCronjob\Cron\UpdateStatelessShipmentTracks"
             method="execute"
         >
-            <schedule>*/15 * * * *</schedule>
+            <schedule>*/5 * * * *</schedule>
         </job>
         <job
             name="hippiemonkeys_shippingtrackcronjob_updatepickuplocations"
